@@ -3,14 +3,16 @@ function insertionSort(a) {
 
   for (let i = 0; i < n; i++) {
     let curr = a[i];
-    let p = i-1;
+    let p = i - 1;
 
-    while(curr < a[p] && p>=0) {
-        a[p+1] = a[p];
-        p--;
+    //while loop to check if left portion of current index has greater value, if its there then shift by 1
+    while (curr < a[p] && p >= 0) {
+      a[p + 1] = a[p];
+      p--;
     }
 
-    a[p+1] = curr;
+    //shift as per say
+    a[p + 1] = curr;
   }
 
   return a;
